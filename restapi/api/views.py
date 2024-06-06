@@ -31,14 +31,3 @@ class home(APIView):
         content={'user':str(request.user),'userid':str(request.user.id)}
         content['response']='Login Successfull'
         return Response(content)
-
-class welcome(APIView):
-    permission_classes =(IsAuthenticated,)
-    
-    def get(self,request):
-        content={}
-        
-        content={'user':str(request.user),'userid':str(request.user.id)}
-        content['response']='Login Successfull'
-        return Response(content)
-
